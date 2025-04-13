@@ -9,15 +9,15 @@ from sklearn.metrics import accuracy_score, f1_score
 RANDOM_TEST = False
 
 if not RANDOM_TEST:
-    from transformers import Qwen2_5_VLForConditionalGeneration,  AutoTokenizer, AutoProcessor
+    from transformers import Qwen2VLForConditionalGeneration,  AutoTokenizer, AutoProcessor
     from qwen_vl_utils import process_vision_info
-    model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        "/data/LLaMA-Factory/output/qwen2_5_vl_lora_sft_2245_041101",
+    model = Qwen2VLForConditionalGeneration.from_pretrained(
+        "/root/zgp2/fanzheming/Qwen2-VL-7B-Instruct",
         torch_dtype=torch.bfloat16,
         attn_implementation="flash_attention_2",
         device_map="auto",
     )
-    processor = AutoProcessor.from_pretrained("/data/LLaMA-Factory/output/qwen2_5_vl_lora_sft_2245_041101")
+    processor = AutoProcessor.from_pretrained("/root/zgp2/fanzheming/Qwen2-VL-7B-Instruct")
 else:
     print("Running in random test mode...")
 
@@ -183,7 +183,7 @@ if __name__ == '__main__':
     answer_file = f"{data_path}/judgement_answer.json"
 
     # Step 1: config the model name
-    model_name = "qwen2.5_vl_sft"
+    model_name = "qwen2_vl"
     pred_file = f"{model_name}_pred_ipv_judgement.json"
 
     # Step 2: run inference

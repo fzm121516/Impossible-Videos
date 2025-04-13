@@ -12,12 +12,12 @@ if not RANDOM_TEST:
     from transformers import Qwen2_5_VLForConditionalGeneration,  AutoTokenizer, AutoProcessor
     from qwen_vl_utils import process_vision_info
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        "/data/LLaMA-Factory/output/qwen2_5_vl_lora_sft_2245_041101",
+        "/root/zgp2/fanzheming/Qwen2.5-VL-7B-Instruct",
         torch_dtype=torch.bfloat16,
         attn_implementation="flash_attention_2",
         device_map="auto",
     )
-    processor = AutoProcessor.from_pretrained("/data/LLaMA-Factory/output/qwen2_5_vl_lora_sft_2245_041101")
+    processor = AutoProcessor.from_pretrained("/root/zgp2/fanzheming/Qwen2.5-VL-7B-Instruct")
 else:
     print("Running in random test mode...")
 
@@ -75,7 +75,6 @@ def inference_one(video_file, question):
         generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
     )
     output_text = output_text[0].strip()
-    print(video_file)
     print(output_text)
     return output_text
 
@@ -184,7 +183,7 @@ if __name__ == '__main__':
     answer_file = f"{data_path}/judgement_answer.json"
 
     # Step 1: config the model name
-    model_name = "qwen2.5_vl_sft"
+    model_name = "qwen2.5_vl"
     pred_file = f"{model_name}_pred_ipv_judgement.json"
 
     # Step 2: run inference
