@@ -14,7 +14,7 @@ if not RANDOM_TEST:
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         "/root/zgp2/fanzheming/Qwen2.5-VL-7B-Instruct",
         torch_dtype=torch.bfloat16,
-        attn_implementation="flash_attention_2",
+        # attn_implementation="flash_attention_2",
         device_map="auto",
     )
     processor = AutoProcessor.from_pretrained("/root/zgp2/fanzheming/Qwen2.5-VL-7B-Instruct")

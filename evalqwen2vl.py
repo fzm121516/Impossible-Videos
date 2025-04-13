@@ -14,7 +14,7 @@ if not RANDOM_TEST:
     model = Qwen2VLForConditionalGeneration.from_pretrained(
         "/root/zgp2/fanzheming/Qwen2-VL-7B-Instruct",
         torch_dtype=torch.bfloat16,
-        attn_implementation="flash_attention_2",
+        # attn_implementation="flash_attention_2",
         device_map="auto",
     )
     processor = AutoProcessor.from_pretrained("/root/zgp2/fanzheming/Qwen2-VL-7B-Instruct")
@@ -75,9 +75,9 @@ def inference_one(video_file, question):
         generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
     )
     output_text = output_text[0].strip()
+    print("Processing video:", video_file)
     print(output_text)
     return output_text
-
 
 def main_proc(question_file, pred_file, data_path):
     with open(question_file, 'r') as f:
