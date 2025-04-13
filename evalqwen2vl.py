@@ -178,7 +178,7 @@ def compute_accuracy_Fscore(pred_file, answer_file):
 
 if __name__ == '__main__':
     # Step 0: config the path
-    data_path = "/data/Impossible-Videos"
+    data_path = "/root/zgp2/fanzheming/Impossible-Videos"
     question_file = f"{data_path}/judgement_question.json"
     answer_file = f"{data_path}/judgement_answer.json"
 
