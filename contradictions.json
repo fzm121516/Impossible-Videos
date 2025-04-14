@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "scene": "A clock ticks loudly, yet time flows backward.",
+    "length": 46
+  },
+  {
+    "id": 2,
+    "scene": "Rain falls upward, soaking the clouds.",
+    "length": 38
+  },
+  {
+    "id": 3,
+    "scene": "Rain pours heavily, streets dry up quickly.",
+    "length": 43
+  },
+  {
+    "id": 4,
+    "scene": "Rain falls quietly, yet the ground dries up.",
+    "length": 44
+  },
+  {
+    "id": 5,
+    "scene": "A clock ticks forward, yet time runs backward.",
+    "length": 46
+  },
+  {
+    "id": 6,
+    "scene": "\"Rain pours down, streets flood, yet the ground is dry.\"",
+    "length": 56
+  },
+  {
+    "id": 7,
+    "scene": "Rain falls up, street puddles dry up, sky clears.",
+    "length": 49
+  },
+  {
+    "id": 8,
+    "scene": "A clock ticks loudly, hands spin backward, hastening time.",
+    "length": 58
+  },
+  {
+    "id": 9,
+    "scene": "Rain falls steadily, yet the ground stays dry.",
+    "length": 46
+  },
+  {
+    "id": 10,
+    "scene": "Rain pours down, streets dry up, flowers wilt.",
+    "length": 46
+  },
+  {
+    "id": 11,
+    "scene": "Raindrops fall upward, wetting clouds, sky blinds earth.",
+    "length": 56
+  },
+  {
+    "id": 12,
+    "scene": "A river flows uphill, defying gravity, mystifying.",
+    "length": 50
+  },
+  {
+    "id": 13,
+    "scene": "A river flows uphill, shimmering against gravity.",
+    "length": 49
+  }
+]
